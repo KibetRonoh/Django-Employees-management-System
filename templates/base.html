@@ -1,0 +1,26 @@
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <title>Crud Application Implementation</title>
+</head>
+<body>
+    <div class="container">
+        <div class="col-md-10 offset-md-1 mt-5">
+            <div class="jumbotron">
+                <h1 class="display-4">Employee Register</h1>
+                <p class="lead"> This is a simple hero unit</p>
+                <hr class="my-4">
+                    {% block content %}
+
+                    {% endblock %}
+                <p>Lovely </p>
+                <a class="btn btn-primary btn-lg" href="#" role="button">Learn More</a>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="{% static 'js/jquery.min.js' %} "></script>
+<script src="{% static 'js/bootstrap.min.js' %} "></script>
+</html>
