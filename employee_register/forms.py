@@ -7,3 +7,12 @@ class EmployeeForm(forms.ModelForm):
         model = Employee
         # fields = '__all__'
         fields = ('fullname', 'emp_code', 'mobile', 'position')
+        labels = {
+            'fullname': 'Full Name',
+            'emp_code': 'EMP. Code'
+        }
+
+    def __init__(self, *args, **kwargs):
+        super(EmployeeForm, self).__init__(*args, **kwargs)
+        self.fields['position'].empty_label = 'Select'
+        self.fields['emp_code'].required = False
